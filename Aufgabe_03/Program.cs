@@ -47,25 +47,25 @@ namespace Aufgabe_03
 
             // Print table:
             var x = a;
-            Console.WriteLine("    x      |      y      ");
-            Console.WriteLine("-------------------------");
+            Console.WriteLine("     x     |     y     ");
+            Console.WriteLine("-----------------------");
 
             while (x <= e)
             {
                 // Print x:
-                Console.Write("{0,-9:f8} | ", x);
+                Console.Write("{0,-10:f7} | ", x);
 
                 // Calculate denominator:
                 var denom = (x + 2) * (x - 1) * (x - 1);
 
                 if (Math.Abs(denom) < 1e-15)
                 {
-                    Console.WriteLine("singularity");
+                    Console.WriteLine("singul.");
                 }
                 else
                 {
                     var y = ((3 * x) - 6) / denom;
-                    Console.WriteLine("{0,-9:f8}", y);
+                    Console.WriteLine("{0,-10:f7}", y);
                 }
 
                 // Increase by step size:
